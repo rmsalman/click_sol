@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery UI Draggable - Default functionality</title>
+  <link rel="stylesheet" href="assets/css/jquery-ui.css">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery-ui.min.js"></script>
+<style>
+	
+	#assigned_attributes {
+		
+	}
+
+</style>
+</head>
+<body>
+ 	<ul id="unassigned_attributes" class="sortable">
+		<li>friendly</li>
+		<li>energetic</li>
+	</ul>
+
+	<ul id="assigned_attributes" class="sortable">
+		<li>lovable</li>
+		<li>handsome</li>
+		<li>intellectual</li>
+	</ul>
+<script>
+$(document).ready(function () {
+	$('.sortable').sortable({
+	    connectWith: '.sortable'
+    });
+});
+
+
+$.fn.extend({ 
+  getMaxHeight: function() {  
+          var maxHeight = -1;
+          this.each(function() {     
+                  var height = $(this).height();
+                  maxHeight = maxHeight > height ? maxHeight : height;   
+                }); 
+                return maxHeight;
+  }
+});
+
+function setMenusDivHeight($attributeDivs) {
+        return $attributeDivs.css('min-height', $attributeDivs.getMaxHeight());
+}
+
+setMenusDivHeight($('.sortable')).sortable({
+  connectWith: 'div.sortable',
+  start: function( event, ui ) {
+    setMenusDivHeight(ui.item.closest('.sortable'))
+                  .css('box-shadow', '0 0 10px blue');
+  },
+  stop: function( event, ui ) {
+    setMenusDivHeight(ui.item.closest('.sortable'))
+            .css('box-shadow', '');
+  }
+});
+</script>
+ 
+</body>
+</html>

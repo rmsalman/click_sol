@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+<head>
+ 
+
+<link rel="stylesheet" href="assets/css/jquery-ui.css">
+<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/jquery-ui.min.js"></script>
+ <style type="text/css">
+   
+.pindora_img {
+    display: block;
+}
+
+.pindora {
+    overflow: hidden;
+    position: relative;
+    max-width: 300px;
+    height: 300px;
+    margin: auto;
+    padding: 40px;
+}
+
+.pindora .pindora_div>div {
+    display: none;
+    position: absolute;
+}
+
+.pindora_img {
+    display: block;
+    width: 100%;
+    position: static;
+}
+
+.pindora_img .pindora {
+    display: block;
+}
+
+ul.pindora_icoz_ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+ul.pindora_icoz_ul li {
+    float: left;
+}
+
+.pindora .pindora_div>.pindora_ico-1 {
+    left: 44%;
+    bottom: 9%;
+}
+.pindora .pindora_div>.pindora_ico-2 {
+    right: 25%;
+    bottom: 14%;
+}
+.pindora .pindora_div>.pindora_ico-3 {
+    right: 11%;
+    bottom: 27%;
+}
+.pindora .pindora_div>.pindora_ico-4 {
+    right: 6%;
+    bottom: 47%;
+}
+.pindora .pindora_div>.pindora_ico-5 {
+    right: 11%;
+    top: 21%;
+
+}
+.pindora .pindora_div>.pindora_ico-6 {
+    right: 25%;
+    top: 8%;
+}
+.pindora .pindora_div>.pindora_ico-7 {
+    top: 2%;
+    left: 44%;
+}
+
+.pindora .pindora_div>.pindora_ico-8 {
+    left: 25%;
+    top: 11%;
+}
+
+.pindora .pindora_div>.pindora_ico-9 {
+    left: 10%;
+    top: 22%;
+}
+
+.pindora .pindora_div>.pindora_ico-10 {
+    top: 41%;
+    left: 7%;
+}
+.pindora .pindora_div>.pindora_ico-11 {
+    bottom: 26%;
+    left: 11%;
+}
+
+.pindora .pindora_div>.pindora_ico-12 {
+    bottom: 12%;
+    left: 25%;
+}
+
+.pindora_ico-2 img {
+    transform: rotate(-32deg);
+}
+
+.pindora_ico-3 img {
+    transform: rotate(-56deg);
+}
+
+.pindora_ico-4 img {
+    transform: rotate(-92deg);
+}
+.pindora_ico-5 img {
+    transform: rotate(-121deg);
+}
+
+.pindora_ico-6 img {
+    transform: rotate(-151deg);
+}
+
+.pindora_ico-7 img {
+    transform: rotate(-180deg);
+}
+.pindora_ico-8 img {
+    transform: rotate(-121deg);
+}
+
+.pindora_ico-9 img {
+    transform: rotate(-150deg);
+}
+
+.pindora_div span {
+    display: none;
+}
+
+
+.circle {
+    background-image: url(assets/img/bg-ring-1.png);
+    background-size: 94% 94%;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+.main-circle{ 
+    margin: auto;
+}
+
+.pindora .pindora_div>div>img {
+    max-width: 100%;
+    height: 100%;
+}
+.pindora .pindora_div>div {
+    width: 50px;
+    height: 50px;
+}
+
+ul.pindora_icoz_ul 
+ .price {
+    display: block;
+    text-align: center;
+}
+ul.pindora_rings_ul {
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pindora_rings_ul li {
+    float: left;
+}
+
+ul.pindora_rings_ul span {
+    display: block;
+}
+.circle_price {
+    display: none;
+}
+
+ </style>
+
+ 
+
+</head>
+<body>
+
+<div class="pindora">
+
+   <div class="circle"><span class="circle_price">0</span></div>
+<div class="pindora_div">
+    <div class="pindora_ico-1">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+
+    <div class="pindora_ico-2">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+
+    <div class="pindora_ico-3">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+
+    <div class="pindora_ico-4">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+
+    <div class="pindora_ico-5">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+
+    <div class="pindora_ico-6">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+
+    <div class="pindora_ico-7">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+    <div class="pindora_ico-8">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+    <div class="pindora_ico-9">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+    <div class="pindora_ico-10">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+    <div class="pindora_ico-11">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+    <div class="pindora_ico-12">
+       <img src="assets/img/icon.png" class=" pindora_ico_img" alt="ico">
+       <span class="price_in"></span>
+    </div>
+</div>
+<div class="pindora_prices">
+  <h3>Total Price: <span class="total_price">0</span></h3>
+</div>  
+</div>
+
+
+<div class="pindora_icoz">
+<ul class="pindora_icoz_ul">
+  <li><img src="assets/img/icon.png" class="pindora_icoz-1" alt="ico"><span class="price">30</span></li>
+  <li><img src="assets/img/icon1.png" class="pindora_icoz-2" alt="ico"><span class="price">40</span></li>
+  <li><img src="assets/img/icon2.png" class="pindora_icoz-3" alt="ico"><span class="price">20</span></li>
+</ul>
+
+<div class="pindora_rings">
+  <ul class="pindora_rings_ul">
+    <li><img src="assets/img/bg-ring-2.png" class="pindora_icoz-2" alt="ico"><span class="pindora_rings_price">40</span></li>
+    <li><img src="assets/img/bg-ring-3.png" class="pindora_icoz-3" alt="ico"><span class="pindora_rings_price">25</span></li>
+    <li><img src="assets/img/bg-ring-4.png" class="pindora_icoz-3" alt="ico"><span class="pindora_rings_price">20</span></li>
+  </ul>
+</div>
+
+ <script type="text/javascript">
+
+$('.pindora_icoz_ul img').click(function(){
+
+var selected_img = $(this).attr('src');
+var selected_class = $(this).attr('class');
+var price = parseInt($(this).next().text());
+var total_price =  parseInt($('.total_price').text());
+
+if($('.pindora_div>div').hasClass('img_added')){
+
+
+      if($('.pindora_div>div').hasClass('last_removed')){
+
+          if($('.price_in').last().text() == '' )
+          {
+            count_price(price, total_price);
+          }
+          $('.last_removed').first().children().attr('src', selected_img).parent().addClass('img_added');
+          $('.last_removed').first().find('span.price_in').text(price);
+          $('.last_removed').first().removeClass('last_removed').addClass($(this).attr('class')).show();
+
+      }else {
+
+
+
+          if($('.price_in').last().text() == '' )
+          {
+            count_price(price, total_price);
+          }else {
+            console.log('not m here');
+          }
+
+
+          $('.pindora_div>div.img_added').last().next().children().attr('src', selected_img).parent().addClass('img_added');
+          $('.pindora_div>div.img_added').last().addClass($(this).attr('class')).show(); 
+          $('.pindora_div>div.img_added').last().children().next('span.price_in').text(price);
+      }
+
+
+}else {
+
+  $('.pindora_div>div:first-child').addClass('img_added ' + $(this).attr('class')).show();
+  $('.pindora_div>div:first-child>img').attr('src', selected_img).parent().addClass('img_added');
+
+  $('.pindora_div>div:first-child').children().next('span.price_in').text(price);
+  var price = parseInt($(this).next().text());
+
+  var total_price =  parseInt($('.total_price').text());
+
+    if($('.pindora_div>div:first-child').hasClass('img_added'))
+    {
+      count_price(price, total_price);
+    }
+
+    if($('.pindora_div>div:first-child').hasClass('last_removed'))
+    {
+      $('.pindora_div>div:first-child').removeClass('last_removed');
+    }
+}
+
+});
+
+
+function count_price (price,total_price){
+  return $('.total_price').text(price+total_price);
+}
+function price_sub (price,total_price){
+  return $('.total_price').text(total_price-price);
+}
+
+
+$('.pindora_div>div').click(function(){
+ var price = parseInt($(this).children().next('span.price_in').text());
+ var total_price =  parseInt($('.total_price').text());
+
+    $(this).children().next('span.price_in').text('');
+    $(this).hide().removeClass('img_added').addClass('last_removed');
+    price_sub (price,total_price)
+});
+
+
+
+
+$('ul.pindora_rings_ul img').click(function(){
+  var total_price   = parseInt($('.total_price').text());
+  var price         = parseInt($(this).next().text());
+  var circle_price  = parseInt($('.circle_price').text());
+
+  $('.circle').css('background-image', 'url('+$(this).attr('src')+')');
+
+  if( circle_price == 0){
+    count_price (price,total_price);
+  }
+  else 
+  {
+    if(circle_price == price)
+    {
+
+    }
+    else 
+    {
+      if(circle_price < price){
+        var new_price = price - circle_price;
+        count_price (new_price,total_price);
+      }
+      if(circle_price > price){
+        var new_price =  circle_price - price;
+        price_sub (new_price,total_price);
+      }
+    }
+  }
+  
+  $('.circle_price').text(price);
+});
+
+</script>
+</body>
+</html>
